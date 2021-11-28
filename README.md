@@ -1,65 +1,28 @@
-# Workshop de Big Data con Apache Spark [🇪🇸]
-Material del Workshop de Big Data
+# Entorno para Participar en Competencias de Kaggle
+Este un ejercicio de aprendizaje en el marco del Seminario de Tópicos Avanzados de la Especialización en Ciencia de Datos cursada en el Instituto Tecnológico de Buenos Aires (ITBA) en Argentina.
 
-## Contenidos
-* [Levantar el ambiente](#levantar-ambiente)
-* [Introducción a Scala](scala/README.md)
-* [Batch Processing (Scala)](README-batch.md)
-* [Structured Streaming Processing (Scala)](README-streaming.md)
-* [Machine Learning (Scala)](README-ml.md)
-* [Jupyter Notebook (Python / pySpark)](README-pyspark.md)
-* [Lista de Jupyter Notebook](jupyter/notebook/README.md)
+Los autores de este trabajo somos:
 
-## Infrastructura
+Mel, Marcos - https://github.com/mmel
+Masiá, Fernando - https://github.com/fermasia
 
-El workshop simula una instalación de producción utilizando container de Docker.
-[docker-compose.yml](docker-compose.yml) contiene las definiciones y configuraciones para esos servicios y sus respectivas UIs:
+Partimos de los recursos que están disponibles en el siguiente Repositorio: https://github.com/MuttData/bigdata-workshop-es
 
-* Apache Spark: [Spark Master UI](http://localhost:8080) | [Job Progress](http://localhost:4040)
-* Apache Kafka:
-* Postgres:
-* [Superset](http://superset.incubator.apache.org): [Nuestro Dashboard](http://localhost:8088/)
+De alli fueron eliminados los coponentes relacionados a Airflow y Kafka ya que no fuero utilizados en este proyecto. 
 
-Los puertos de acceso a cada servicio quedaron los defaults. Ej: **spark master:7077**, **postgres: 5432**
+Las imagenes de los contenedores de Superset y Postgres fueron modificados (para que los cambios que realizamos persistan) y pusheados a una cuenta propia de DockerHub, y el script de inicialización original control-env.sh y el docker-compose.yml ajustados para utilizar estas nuevas imágenes. 
 
-## Levantar ambiente
+https://hub.docker.com/repository/docker/nandomasia/superset
+https://hub.docker.com/repository/docker/nandomasia/postgres
 
-Instalar el ambiente [siguiendo las instrucciones acá](INSTALL.md).
+Para poder acceder directamente a Superset, se creó un usuario "Admin" con la contraseña "workshop" de modo de acceder directamente al dashboard.
 
-Correr el script que levanta el ambiente `Usage: control-env.sh (start|stop|cleanup)`:
+## Para qué sirve?
 
-```bash
-./control-env.sh start
+El objetivo es crear un template de Notebook de Jupyter que sirva para participar en competencias de Kaggle, que automatice parcialmente los pasos necesarios para descargar datasets, ajustar un modelo con diferentes algoritmos y parámetros, trackear estos experimentos con ayuda de MLOps, hacer submits de predicciones a Kaggle, recuperar los resultados del leaderboard y parsearlos a un Dataframe de Pandas, insertar tanto las corridas trackeadas en MLOps como los resultados obtenidos del Leaderboard de Kaggle en una base de datos Postgres, y finalmente construir un Dashboard en Superset para consultar los resultados.
 
-**IMPORTANTE** el script `control-env.sh cleanup` borra cualquier dato que haya sido procesado anteriormente.
+## Cómo utilizar el entorno
 
+Una vez clonado el repositorio correr el script control-env.sh con el parámetro "start".
 
-# Access Spark-Master and run spark-shell
-docker exec -it master bash
-root@588acf96a879:/app# spark-shell
-```
-Probar:
-
-```scala
-val file = sc.textFile("/dataset/yahoo-symbols-201709.csv")
-file.count
-file.take(10).foreach(println)
-```
-
-Acceder al [Spark Master: http://localhost:8080](http://localhost:8080) y [SPARK-UI: http://localhost:4040](http://localhost:4040).
-
-### Troubleshooting
-
-Si los jobs mueren (`KILLED`) y no se completan puede ser debido a la memória disponible para Docker, **aumente la memoria > 8Gb** al proceso de Docker:
-
-![](./images/docker-advanced-config.jpg)
-
-# Siga leyendo
-* [Introducción a Scala](scala/README.md)
-* [Jupyter Notebook (Python / pySpark)](README-pyspark.md)
-
-## Sobre
-Gustavo Arjones &copy; 2017-2020
-[arjon.es](https://arjon.es) | [LinkedIn](http://linkedin.com/in/arjones/) | [Twitter](https://twitter.com/arjones)
-
-Mutt Data &copy; 2021-
+Esto va a disponibilizar en la dirección "localhost" una homepage con los links al servidor de Jupyter Notebooks (corriendo con 2 workers de Spark) y a una insancia de Apache Superset donde estarán disponibles los Dashboards.

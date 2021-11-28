@@ -14,7 +14,7 @@ function cleanup {
 
 function start {
   echo "Starting up"
-  #docker cp superset.db superset:/var/lib/superset.db  # in case it's needed to force Superset.db updating
+  docker cp superset.db superset:/var/lib/superset/superset.db  # in case it's needed to force Superset.db updating
   docker-compose --project-name wksp up -d
 }
 

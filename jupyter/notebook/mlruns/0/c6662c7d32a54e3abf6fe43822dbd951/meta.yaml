@@ -1,0 +1,15 @@
+artifact_uri: file:///notebook/mlruns/0/c6662c7d32a54e3abf6fe43822dbd951/artifacts
+end_time: 1637000592277
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: c6662c7d32a54e3abf6fe43822dbd951
+run_uuid: c6662c7d32a54e3abf6fe43822dbd951
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1637000585206
+status: 3
+tags: []
+user_id: root

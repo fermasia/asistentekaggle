@@ -4,7 +4,8 @@ Este un ejercicio de aprendizaje en el marco del Seminario de Tópicos Avanzados
 Los autores de este trabajo somos:
 
 Mel, Marcos - https://github.com/mmel
-Masiá, Fernando - https://github.com/fermasia
+
+Masiá, Fernando - https://github.com/fermasia - masia.fer@gmail.com
 
 Partimos de los recursos que están disponibles en el siguiente Repositorio: https://github.com/MuttData/bigdata-workshop-es
 

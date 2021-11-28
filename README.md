@@ -33,7 +33,7 @@ Esto va a disponibilizar en la dirección "localhost" una homepage con los links
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/6023711/143772246-93b6b96d-4f51-4fef-98bd-4e70d9cfd739.png)
+![image](https://user-images.githubusercontent.com/6023711/143772453-a6b1a8a2-b9b2-45d5-bdc9-3926f2c1c57f.png)
 
 ![image](https://user-images.githubusercontent.com/6023711/143772278-55a9aff5-9324-4a4b-96b8-c8b214a11f62.png)
 

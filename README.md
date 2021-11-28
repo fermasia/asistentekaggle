@@ -1,4 +1,5 @@
 # Entorno para Participar en Competencias de Kaggle
+![image](https://user-images.githubusercontent.com/6023711/143772684-c32b9cb1-526d-4471-877d-279304fb2a77.png)
 Este un ejercicio de aprendizaje en el marco del Seminario de Tópicos Avanzados de la Especialización en Ciencia de Datos cursada en el Instituto Tecnológico de Buenos Aires (ITBA) en Argentina.
 
 Los autores de este trabajo somos:

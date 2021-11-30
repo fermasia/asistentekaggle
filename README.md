@@ -3,7 +3,7 @@ Este un ejercicio de aprendizaje en el marco del Seminario de Tópicos Avanzados
 
 Los autores de este trabajo somos:
 
-Mel, Marcos - ????????????????????
+Mel, Marcos - https://github.com/mmelitba - mmel@itba.edu.ar
 
 Masiá, Fernando - https://github.com/fermasia - masia.fer@gmail.com
 

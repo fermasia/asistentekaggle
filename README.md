@@ -43,9 +43,10 @@ Esto va a disponibilizar en la dirección "localhost" una homepage con los links
 
 ![image](https://user-images.githubusercontent.com/6023711/143772332-a23b713a-02a9-4911-b3bd-ded6a180288d.png)
 
-![image](https://user-images.githubusercontent.com/6023711/143772343-72c3d986-ac6a-42a8-9802-0cad7651180c.png)
+![image](https://user-images.githubusercontent.com/6023711/143978105-0432ac4c-bc54-4132-8ba2-934e7103850f.png)
 
-![image](https://user-images.githubusercontent.com/6023711/143772356-fc77b6f8-8a53-4317-9175-9179ab61534c.png)
+![image](https://user-images.githubusercontent.com/6023711/143978139-14af8d8a-7259-438d-90ca-3a4f0319738a.png)
+
 
 
 
